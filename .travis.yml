@@ -2,9 +2,9 @@ language: java
 jdk:
   - oraclejdk8
 script:
-  - cd summer-build
+  - cd winter-build
   - mvn test -B
 
 after_success:
-  - cd ../summer-parent
+  - cd ../winter-parent
   - mvn clean cobertura:cobertura coveralls:report
