@@ -1,0 +1,10 @@
+language: java
+jdk:
+  - oraclejdk8
+script:
+  - cd winter-build
+  - mvn test -B
+
+after_success:
+  - cd ../winter-parent
+  - mvn clean cobertura:cobertura coveralls:report
