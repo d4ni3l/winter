@@ -1,0 +1,10 @@
+language: java
+jdk:
+  - oraclejdk8
+script:
+  - cd summer-build
+  - mvn test -B
+
+after_success:
+  - cd ../summer-parent
+  - mvn clean cobertura:cobertura coveralls:report
