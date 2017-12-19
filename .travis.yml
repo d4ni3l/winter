@@ -7,5 +7,5 @@ script:
   - mvn test -B
 
 after_success:
-  - cd ../winter-parent
+  - cd winter-parent
   - mvn clean cobertura:cobertura coveralls:report
