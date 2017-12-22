@@ -7,4 +7,4 @@ script:
 
 after_success:
   - cd ../winter-core
-  - mvn clean cobertura:cobertura coveralls:report
+  - mvn clean test jacoco:report coveralls:report
